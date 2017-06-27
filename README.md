@@ -13,3 +13,4 @@ Improve upon existing STAT 217 labs in R by creating a community data camp cours
 4.  Take the Data Analysis and Statistical Inference course on Data Camp (https://www.datacamp.com/community/open-courses/statistical-inference-and-data-analysis#gs.e43W=KU)
 5.  Create a similar Data Camp community course specific to STAT 217 to replace pre-lab assignments (https://www.datacamp.com/teach/).
 6.  Create a quick R reference guide that contains essential information learned in each lab assignment.
+7.  Recommended Data Camp course for enhancing R programming:  "Writing Functions in R" (https://www.datacamp.com/courses/writing-functions-in-r)
