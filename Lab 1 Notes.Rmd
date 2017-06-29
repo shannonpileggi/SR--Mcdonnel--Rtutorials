@@ -1,0 +1,33 @@
+---
+title: "Lab 1 Notes"
+author: "Tessa McDonnel"
+date: "6/29/2017"
+output: html_document
+---
+# Objectives
+- Introduce Students to R and RStudio
+    * opening files and scripts in RStudio
+    * saving R markdown files with 'knit'
+- Learning Simple commands and basic functions in R (arithmetic)
+- How to Import Data from local file with code in History tab
+- Introduction to R base graphics
+
+# Statistical Concepts
+- Understanding survey analysis data
+- Deciphering a survey codebook
+- Interpereting simple one sample proportion
+- Recognizing Linear Relationships
+- Interpereting simple graphical displays (ie. hist, boxplot, ect.)
+
+
+# R Concepts/Syntax
+- simple arithmetic symbols
+- examining summary statistics from dataset
+- examining specific variables from dataset
+- introducion to basic R graphics
+  * improve graph by specifying more arguements
+
+# Additional Notes
+- The pre-lab videos and manual are very extensive... I'm not sure what else I can possibly add to make this easier for students. Are they really struggling with the R markdown?
+- With this introduction lab, the majority is just how to get files into R, saving, using R markdown, and only a small portion is on statistical concepts. Should I spend any of the online course time on 'how to use R' or should I just focus more on the statistical aspect of the labs?
+
