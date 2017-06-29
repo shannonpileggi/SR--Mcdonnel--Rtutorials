@@ -1,0 +1,27 @@
+---
+title: "Lab 2 Notes"
+author: "Tessa McDonnel"
+date: "6/29/2017"
+output: html_document
+---
+# Objectives
+- learn statistical commands to explore data set
+- how to create a new variable
+- how to improve basic graphics in R with parameters
+
+
+# Statistical Concepts
+- one sample proportion (boy baptisms / (boy baptisms + girlbaptisms))
+- logical expressions 
+
+# R Concepts/Syntax
+- using R help file with ?help
+- using R commands to produce statistics from dataset and to see different   views of the data set (names(), head(), ect.)
+- importing R data set from internet
+- creating new variables in R using assignment command
+- using $ to access specific variables in dataset
+- specific variables in data frame are vectors
+- logical expressions returning TRUE or FALSE
+- graphical parameters in base R graphics
+
+# Additional Notes
