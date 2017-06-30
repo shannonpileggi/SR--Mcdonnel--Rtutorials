@@ -34,4 +34,3 @@ output: html_document
 - Also how to use the factor() function
 - introduce NA 
 - introduce prop.table(table()) to get proportions instead of counts
-- mollys the best
