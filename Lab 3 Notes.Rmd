@@ -1,0 +1,35 @@
+---
+title: "Lab 3 Notes"
+author: "Tessa McDonnel"
+date: "6/29/2017"
+output: html_document
+---
+
+# Objectives
+- learn different variable types and how to change to change them in R if   R treats them incorrectly
+- summarizing categorical variables
+- summarizing quantitative variables
+- visualizing data with histograms and boxplots
+
+# Statistical Concepts
+- understand the difference between bernoulli (categorical) variables and   integer (quantitative) variables
+- the summary statistics (mean, sd, ect.) constitute the distribution on   data.
+- comparing response variables by groups using a ~ provides more           meaningful information than just overall statistics (ex. overall mean    birth weight)
+- basic visualization for categorical variables is a barplot (need to      make table first though)
+- scatterplots can show linear relationships
+
+
+# R concepts/Syntax
+- reading in text and csv files using the command line
+- learn to install packages in RStudio
+- using favstats() to get important summary statistics from one command
+- introduce new functions 
+- NA is the placeholder R uses for missing values
+- command favstats(quant ~ categ) will give the summary statistics of the   quant variable by categorical group
+- the ~ can also work with boxplot() to create side-by-side plots
+- making tables in R
+
+# Additional Notes
+- In DataCamp course, add information on when and how to use the str() function and the c() function
+- Also how to use the factor() function
+- introduce NA 
