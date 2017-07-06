@@ -31,7 +31,17 @@ output: html_document
 - The pre-lab videos and manual are very extensive... I'm not sure what else I can possibly add to make this easier for students. Are they really struggling with the R markdown?
 - With this introduction lab, the majority is just how to get files into R, saving, using R markdown, and only a small portion is on statistical concepts. Should I spend any of the online course time on 'how to use R' or should I just focus more on the statistical aspect of the labs?
 
-# Changes to DataCamp Course
-- Use multiple choice questions on big picture programming topics for the first few slides on the course.
-- Split up the 'Using R as a Calculator' slide into basic how to use datacamp, arithmetic, assignment of vaiables, using c() function to assign a vector
-- Make 'Generating Numbers' slide easier to understand
+# DataCamp Course Outline: Lab 1
+- Use multiple choice questions on big picture programming topics.
+   * what R is and what it is used for
+   * uses of functions (built-in R) and why they exist
+   * what a vector is and difference between vector and data frame --> vector is a variable in dataframe
+
+- How to use DataCamp
+- Using R as a calculator to perform arithetic
+- Basic types of R data (numeric, integer, logical, character)
+- Variable Assignment (using c() function to vector assignment)
+- How to generate numbers using seq()
+- Examining summary statistics from dataset or specific variables in dataset (access variable with $)
+- Explore base R graphics with given dataset
+
