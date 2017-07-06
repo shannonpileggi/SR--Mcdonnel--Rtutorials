@@ -16,7 +16,7 @@ output: html_document
 
 # R Concepts/Syntax
 - using R help file with ?help
-- using R commands to produce statistics from dataset and to see           different views of the data set (names(), head(), ect.)
+- using R commands to produce statistics from dataset and to see different views of the data set (names(), head(), ect.)
 - importing R data set from internet
 - creating new variables in R using assignment command
 - using $ to access specific variables in dataset
@@ -25,7 +25,13 @@ output: html_document
 - graphical parameters in base R graphics
 
 # Additional Notes
-- For DataCamp course, practice using variables within data frame with     dataframe$variable
-- Also focus on how to change arguements in the plot() function to         improve the graphs
+- For DataCamp course, practice using variables within data frame with dataframe$variable
+- Also focus on how to change arguements in the plot() function to improve the graphs
 
-
+# DataCamp Course Outline: Lab 2
+- Built in R Functions that are used to explore datasets (names(), dim(), ect.)
+- Access variables and run calculations on them
+    * mean(), median(), sum()
+- Create new variables in data frame
+- Change or manipulate variables to make new ones
+- Graph attributes like axis names and legend
