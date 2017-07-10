@@ -1,0 +1,39 @@
+---
+title: "Lab 4 Notes"
+author: "Tessa McDonnel"
+date: "7/9/2017"
+output: html_document
+---
+
+# Objectives
+- using sample function to take random sample
+- loading packages in R markdown without messages
+- loading images in R markdown --> ![](imagename.ext)
+
+# Statistical Concepts
+- random samples will produce a different set of values every time
+- can use and R function to keep one random sample
+- sample prop good estimate for population prop
+- how sample size effects standard error
+
+# R Concepts/Syntax
+- use the sample() function to take a random sample of your dataset
+- use set.seed() to keep one one random sample
+- can assign names to random sample with <- 
+- displaying values in the sample
+- use message = FALSE as an arguement in R chunk to load mosaic package but leave out the messages
+- can load images in html files with ![](imagename.ext)
+
+# DataCamp Course Outline
+- how to use the sample() function
+- using set.seed(number) to have a fixed random sample
+- show how random sample statistic is similar to population (sample proportion is a good estimate of population proportion)
+- take larger sample and compare mean and sd (show as n increases, standard error decreases)
+- using R as a calculator to find confidence intervals
+- syntax for uploading images (multiple choice)
+
+
+
+
+
+
