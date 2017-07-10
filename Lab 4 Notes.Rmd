@@ -32,6 +32,7 @@ output: html_document
 - using R as a calculator to find confidence intervals
 - syntax for uploading images (multiple choice)
 
+# Questions
 
 
 
