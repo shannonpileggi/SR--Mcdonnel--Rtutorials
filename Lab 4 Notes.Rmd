@@ -35,6 +35,8 @@ output: html_document
 # Questions
 - should I add a slide about using R to find critical values?
 
+- should I add the quiz questions to the datacamp course as multiple choice?
+
 
 
 
