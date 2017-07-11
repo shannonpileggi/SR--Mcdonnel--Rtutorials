@@ -1,0 +1,6 @@
+Possible built-in R dataset:
+
+1) InsectSprays: for creating side-by-side boxplots count ~ trt
+2) ToothGrowth: same thing
+3) women: shows linear relationship between height and weight
+4) USAccDeaths: quantitative data
