@@ -33,7 +33,7 @@ output: html_document
 - syntax for uploading images (multiple choice)
 
 # Questions
-- 
+- should I add a slide about using R to find critical values?
 
 
 
