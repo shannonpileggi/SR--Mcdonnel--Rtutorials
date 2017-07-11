@@ -1,0 +1,22 @@
+---
+title: "Lab 5 Notes"
+author: "Tessa McDonnel"
+date: "7/11/2017"
+output: html_document
+---
+
+
+# Objectives
+
+
+# Statistical Concepts
+
+
+# R Concepts/Syntax
+
+
+# DataCamp Course Outline
+
+
+# Questions
+
