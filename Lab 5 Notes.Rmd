@@ -7,16 +7,31 @@ output: html_document
 
 
 # Objectives
-
+- use one sample t-test R function to perform inference on means
+- introduction to the t distribution
+- calculate p-values with t-stats
+- calculate t* critical values
 
 # Statistical Concepts
+- testing a hypothesis with a one-sample t test
+- how changing elements in the hypothesis test change the conclusion
+- how to conclude a hypothesis test with a given p-value and alpha level
 
 
 # R Concepts/Syntax
-
+- the t.test function and it's arguments
+- finding probabilities with pt() and quantiles with qt()
 
 # DataCamp Course Outline
-
+- Introduction to a t-test (maybe with a mult choice question)
+  - when to use it
+  - what assumptions need to be met
+- Explain how to use the t.test() function and what arguments can be passed   through it
+- how to use the pt() function to find probablities
+- how to use the qt() function to find quantiles
+- find a good data set to use! Something Interesting.
 
 # Questions
+- There isn't much for me to do for this lab
+- should I make slides on how to use qt() and pt()?
 
