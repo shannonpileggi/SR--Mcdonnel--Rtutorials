@@ -34,4 +34,5 @@ output: html_document
 # Questions
 - There isn't much for me to do for this lab
 - should I make slides on how to use qt() and pt()?
+- testing: re-syncing with rstudio
 
