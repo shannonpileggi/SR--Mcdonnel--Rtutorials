@@ -6,6 +6,7 @@ output: html_document
 ---
 
 
+
 # Objectives
 - use one sample t-test R function to perform inference on means
 - introduction to the t distribution
