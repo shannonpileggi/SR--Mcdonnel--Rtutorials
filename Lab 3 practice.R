@@ -1,4 +1,4 @@
-ADNI <- read_csv("~/Downloads/Lab data sets/ADNI.csv")
+ADNI <- read.csv("~/Downloads/Lab data sets/ADNI.csv")
 
 #2#
 dim(ADNI)
@@ -43,7 +43,7 @@ plot(ADNI$MMSE, ADNI$adas)
 #there is a negative linear relationship; as MMSE scores increase, adas scores decrease
 
 #13#
-prop.table(table(ADNI$APOE4f, ADNI$DX))
+table(ADNI$APOE4f, ADNI$DX)
 
 
 
