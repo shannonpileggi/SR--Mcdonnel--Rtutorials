@@ -14,3 +14,9 @@ text(4, 7, expression(bar(x) == sum(frac(x[i], n), i==1, n)))
 plot(-1:1, -1:1, type = "n", xlab="", ylab="", xaxt = 'n', yaxt = 'n')
 text(0, 0, expression(bar(x) %+-% t ^ {"*"} *  frac(s, sqrt(n))), cex = 2)
 
+
+plot(-6:6, -6:6, type = "n", xlab="", ylab="", xaxt = 'n', yaxt = 'n')
+text(0, 3, expression(paste("Ho:", mu, "=5")), cex = 3)
+text(0, -3, expression(paste("Ha:", mu, ">5")), cex = 3)
+
+

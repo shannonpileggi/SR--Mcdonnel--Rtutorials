@@ -12,6 +12,7 @@ output: html_document
 - How to Import Data from local file with code in History tab
 - Introduction to R base graphics
 
+
 # Statistical Concepts
 - Understanding survey analysis data
 - Deciphering a survey codebook

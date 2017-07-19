@@ -6,7 +6,6 @@ output: html_document
 ---
 
 
-
 # Objectives
 - use one sample t-test R function to perform inference on means
 - introduction to the t distribution
@@ -35,5 +34,11 @@ output: html_document
 # Questions
 - There isn't much for me to do for this lab
 - should I make slides on how to use qt() and pt()?
-- testing: re-syncing with rstudio
+- datacamp for a classroom: https://www.datacamp.com/groups/education
+- not sure if I can link MY course to that.. need to email them again about how to do that
 
+
+# make dataset package?
+- dev
+- hsaur package built for textbook
+- r packages with datasets
