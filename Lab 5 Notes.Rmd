@@ -36,6 +36,7 @@ output: html_document
 - should I make slides on how to use qt() and pt()?
 - datacamp for a classroom: https://www.datacamp.com/groups/education
 - not sure if I can link MY course to that.. need to email them again about how to do that
+- what are the assumptions you are including? The lab 5 manual is cut off a little so I'm missing the first part
 
 
 # make dataset package?
