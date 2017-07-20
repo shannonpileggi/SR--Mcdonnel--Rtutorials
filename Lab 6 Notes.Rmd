@@ -35,8 +35,8 @@ output: html_document
 - will you always specify var.equal = FALSE?
 - schooldays data set in HSAUR not normal but n >30 is that okay?
 - do you want them to type library(mosaic) themselves?
-- Im having trouble figuring out how to do the 'not equal' sign in the plots and still keeping mu as the symbol
+- I'm having trouble figuring out how to do the 'not equal' sign in the plots and still keeping mu as the symbol
 - Can I use Anorexia data from MASS package for all of lab 6?
 
 
-
+- look into TISE for the article 
