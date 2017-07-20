@@ -39,4 +39,8 @@ output: html_document
 - Can I use Anorexia data from MASS package for all of lab 6?
 
 
+# Notes
 - look into TISE for the article 
+- look into charatan
+- make them type library (mosiac)
+- add questions about if the conditions were satisfied
