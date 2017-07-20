@@ -7,36 +7,35 @@ output: html_document
 
 
 # Objectives
--
+- How to do a 2-sample t test 
+- How to execute a paired t-test for mean difference
+- How to use ANOVA when more than 2 means
 
 # Statistical Concepts
-- random samples will produce a different set of values every time
-- can use and R function to keep one random sample
-- sample prop good estimate for population prop
-- how sample size effects standard error
+- using a 2 sample t-test to find significant difference between groups in a categorical variable
+- If a confidence interval contains 0, the test is not significant (Possible there is **no** difference between groups)
+- difference between paired and 2-sample t-test
 
 # R Concepts/Syntax
-- use the sample() function to take a random sample of your dataset
-- use set.seed() to keep one one random sample
-- can assign names to random sample with <- 
-- displaying values in the sample
-- use message = FALSE as an arguement in R chunk to load mosaic package but leave out the messages
-- can load images in html files with ![](imagename.ext)
+- installing "HSAUR" package for data sets
+- t.test for a two sample t-test
+- t.test for a paired t-test
+- aov() function for comparing more than 2 means
+- TukeyHSD
 
 # DataCamp Course Outline
-- how to use the sample() function
-- using set.seed(number) to have a fixed random sample
-- show how random sample statistic is similar to population (sample proportion is a good estimate of population proportion)
-- take larger sample and compare mean and sd (show as n increases, standard error decreases)
-- using R as a calculator to find confidence intervals
-- syntax for uploading images (multiple choice)
+- Accessing data with HSAUR
+- Assumptions for 2-sample t (normallity or number > 30, independent obs)
+- How to use t.test() for 2-sample
+- Assumptions for paired t-test (independence of obs, )
+- Using the paired = TRUE option to perform paired test
+
 
 # Questions
-- should I add a slide about using R to find critical values?
-
-- should I add the quiz questions to the datacamp course as multiple choice?
-
-
+- will you always specify var.equal = FALSE?
+- schooldays data set in HSAUR not normal but n >30 is that okay?
+- do you want them to type library(mosaic) themselves?
+- Im having trouble figuring out how to do the 'not equal' sign in the plots and still keeping mu as the symbol
 
 
 
