@@ -22,3 +22,12 @@ text(0, -3, expression(paste("Ha:", mu, ">5")), cex = 3)
 plot(1:10, 1:10, type = "n") 
 text(4, 7, expression("This is a subscript "[2]))
 
+
+#Dr. Pileggi's modification
+#If you want, you can use the frame=F option to remove the box around the figure
+#You can also do this without the paste function - I think the only drawback here is the space between 
+#Ho and the colon
+plot(-6:6, -6:6, type = "n", xlab="", ylab="", xaxt = 'n', yaxt = 'n', frame=F)
+text(0, 3, expression(H[o]: mu == 5), cex = 3)
+text(0, -3, expression(H[o]: mu != 5), cex = 3)
+
