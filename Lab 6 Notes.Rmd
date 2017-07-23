@@ -36,6 +36,7 @@ output: html_document
 - schooldays data set in HSAUR not normal but n >30 is that okay?
 - do you want them to type library(mosaic) themselves?
 - Im having trouble figuring out how to do the 'not equal' sign in the plots and still keeping mu as the symbol
+- charlatan
 
 
 
