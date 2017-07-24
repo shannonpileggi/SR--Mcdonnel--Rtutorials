@@ -42,7 +42,6 @@ output: html_document
 # Questions
 - should I use the lab data sets from the lab manuals in the course
 - if yes, how can I get those to be online datasets because I can only import datasets from the web, not personal computer
-- should I use built in R data sets instead?
 
 
 
