@@ -1,0 +1,44 @@
+---
+title: "Questions for 7/27 meeting"
+author: "Tessa McDonnel"
+date: "7/26/2017"
+output: html_document
+---
+
+### LaTeX Stuff
+* Why is your LaTeX extension .tex? 
+    + the tutorials I saw with LaTeX and R studio said to use .Rnw
+    + How to write R code (and evaluate) in a .tex file?
+    
+* Everytime I compile the .Rnw file it creates 4 additional files that I don't think are necessary. Is there a way around that? It's cluttering my TISE folder.
+
+* How to do TISE style
+
+* How to do subscipts in LaTeX
+
+### Literature Review
+* Not exactly sure what to focus on in the lit review... 
+    + The only writing I've done is in English class where everything written supports a thesis... this article is kind of a 'how-to' and why DataCamp is good but is there a thesis?
+    + Well I've done a couple 'journal articles' but did not use references
+    
+* Does the pedagogical context need to be supported with literature? 
+
+
+
+### Other
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 

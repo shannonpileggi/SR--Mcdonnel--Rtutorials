@@ -50,3 +50,7 @@ output: html_document
 - look into charatan
 - make them type library (mosiac)
 - add questions about if the conditions were satisfied
+- Latex mathematical expressions
+- start literature review
+- type up outline
+- get started with latex for writing journal article
