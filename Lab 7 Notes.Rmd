@@ -1,0 +1,34 @@
+---
+title: "Lab 7 Notes"
+author: "Tessa McDonnel"
+date: "8/8/2017"
+output: html_document
+---
+
+# Objectives
+- use one sample z-test for single proportion
+- two sample z-test for two proportions
+- use chi-sq to test for association between two categorical vars
+- calculating p-values from test statistics
+
+# Statistical Concepts
+- to test proportions, use z-tests
+- one sample z-test statistic is equal to the x^2 statistic
+- two sample z-test is used when testing 2 categorical variables
+
+# R Concepts/Syntax
+- examining categorical variables with the table() function
+- use addmargins() around the table to get totals
+- use prop.test() for one sample z-tests
+- use prop.test for 2 sample z-test with c() function added
+
+
+# DataCamp Course Outline
+- get a data set with all categorical variables
+
+# Questions
+- Will you always use z-test for proportions and t-test for means?
+- Need help with getting a open intro data set about NC birth records into datacamp... smoker/nonsmoker and premie/healthy. I want to use this for the 2 sample z-test
+- I can use the source() function to import other open intro data but for some reason not this one
+# Notes
+- all variables in the data set are categorical
