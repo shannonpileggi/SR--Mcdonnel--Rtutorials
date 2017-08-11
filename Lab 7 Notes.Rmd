@@ -25,10 +25,15 @@ output: html_document
 
 # DataCamp Course Outline
 - get a data set with all categorical variables
+- Start with one sample z, then 2 sample, the chi-squared
+- add in most of the quiz questions
+
 
 # Questions
 - Will you always use z-test for proportions and t-test for means?
 - Need help with getting a open intro data set about NC birth records into datacamp... smoker/nonsmoker and premie/healthy. I want to use this for the 2 sample z-test
 - I can use the source() function to import other open intro data but for some reason not this one
+
 # Notes
 - all variables in the data set are categorical
+- The data for the chi-squared test is a little inappropriate but it's fun and exciting! Now I kinda have too many drug/smoking related questions but those are the ones that are interesting for students but I'll go back and change earlier questions regarding that stuff.
