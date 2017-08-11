@@ -1,0 +1,22 @@
+---
+title: "DataCamp course critiques"
+author: "Tessa McDonnel"
+date: "8/10/2017"
+output: html_document
+---
+
+## Lab 3 
+- This is so weird... the data set I'm using (cdc) from openintro is not importing correctly. I wrote this lab a couple weeks ago with the same data set and it worked fine. Now I can't even preview the exercise without it giving me an error. I've tried a lot of techniques to load the cdc data but nothing has worked. Maybe it is too big? The other data sets from openintro are working perfectly in the DataCamp course so I probably need to ask Weston about this... or just use different data.
+
+- I guess I forgot to add a slide about summarizing a quant var by group... I'll add that now
+### str() function
+- I feel like we should include something with str() because that is the easiest way to obtain var types
+- The variable type terminology from regular lecture and R is different but do you think this is too complicated (and not intuitive) for students? 
+
+#### Changing variable types
+I need some time to figure out how I can make this flow better
+
+#### Quantitative variables
+- I added 3 different problems for them to practice using the function but I can definitly get rid of them. favstats() comes up a lot in the labs so I thought the students would benefit from having the format ingrained
+
+
