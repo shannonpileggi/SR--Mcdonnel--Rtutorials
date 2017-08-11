@@ -20,3 +20,5 @@ I need some time to figure out how I can make this flow better
 - I added 3 different problems for them to practice using the function but I can definitly get rid of them. favstats() comes up a lot in the labs so I thought the students would benefit from having the format ingrained
 
 
+#### Multiple choice question
+- Can/should I add the exact quiz questions you wrote?
