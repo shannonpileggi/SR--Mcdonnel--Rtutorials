@@ -33,6 +33,8 @@ output: html_document
 - Will you always use z-test for proportions and t-test for means?
 - Need help with getting a open intro data set about NC birth records into datacamp... smoker/nonsmoker and premie/healthy. I want to use this for the 2 sample z-test
 - I can use the source() function to import other open intro data but for some reason not this one
+- I don't see any assumptions for the z-tests... should I add questions on the assumptions in the DataCamp course?
+- Should I add a slide on the prop.table() function? I feel like it may do more harm than good because of the margin arguement.
 
 # Notes
 - all variables in the data set are categorical
