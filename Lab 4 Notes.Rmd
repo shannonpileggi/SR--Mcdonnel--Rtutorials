@@ -37,7 +37,8 @@ output: html_document
 
 - should I add the quiz questions to the datacamp course as multiple choice?
 
-
+# Notes
+* in the lab manual, the 'commands used' portion has the arguements of sample (x=, n=) but it should be size
 
 
 

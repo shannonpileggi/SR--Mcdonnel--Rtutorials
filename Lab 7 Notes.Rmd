@@ -8,20 +8,21 @@ output: html_document
 # Objectives
 - use one sample z-test for single proportion
 - two sample z-test for two proportions
-- use chi-sq to test for association between two categorical vars
+- chi-squared test of association
 - calculating p-values from test statistics
 
 # Statistical Concepts
 - to test proportions, use z-tests
 - one sample z-test statistic is equal to the x^2 statistic
 - two sample z-test is used when testing 2 categorical variables
+- use chi-sq to test for association between 2 categorical vars (one binary and other with more than 2 levels)
 
 # R Concepts/Syntax
 - examining categorical variables with the table() function
 - use addmargins() around the table to get totals
 - use prop.test() for one sample z-tests
 - use prop.test for 2 sample z-test with c() function added
-
+- chisq.test() for chi-squared with correct = F
 
 # DataCamp Course Outline
 - get a data set with all categorical variables
@@ -30,11 +31,9 @@ output: html_document
 
 
 # Questions
-- Will you always use z-test for proportions and t-test for means?
-- Need help with getting a open intro data set about NC birth records into datacamp... smoker/nonsmoker and premie/healthy. I want to use this for the 2 sample z-test
-- I can use the source() function to import other open intro data but for some reason not this one
+- The hypotheses and conclusion for the chi-squared test is missing on the lab manual...do you want it in there?
 - I don't see any assumptions for the z-tests... should I add questions on the assumptions in the DataCamp course?
-- Should I add a slide on the prop.table() function? I feel like it may do more harm than good because of the margin arguement.
+- Should I add a slide on the prop.table() function? I feel like it may do more harm than good because of the 'margin' arguement.
 
 # Notes
 - all variables in the data set are categorical

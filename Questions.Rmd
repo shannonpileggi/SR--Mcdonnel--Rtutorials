@@ -29,7 +29,7 @@ output: html_document
 
 * How detailed should I make the how-to? I'm struggling with what to add
 * I can't commit/push/pull anything to the TISE repository... I'm not sure why but right now I'm just writing everything on GitHub so it's not a huge issue.
-
+* where should I add the 'modulariy' stuff?
 
     
     
