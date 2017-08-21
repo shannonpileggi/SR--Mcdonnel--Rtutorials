@@ -1,0 +1,25 @@
+---
+title: "DataCamp lab 4a/b critiques"
+author: "Tessa McDonnel"
+date: "8/20/2017"
+output: html_document
+---
+
+## Overall course questions
++ You can specify how many points you want to make each exercise worth so we should go through and change those
+
+## Lab 4a
++ Should I move the set.seed() multiple choice right after the normal coding exercise with set.seed()
+### Population Proportions
++ should I say to treat the sample as the population in this slide at the front or the first exercise?
++ I'll add in the addmargins and we'll see if that would be too complicated... there's only 2 number to add for the sum so I don't think it's super necessary.
+
+## Lab 4b
++ The chickweight data set does not specify what the diets are, just that their are four diets coded 1,2,3,4. Is it okay if I just leave that? I don't know where more info would be.
+
++ I added some multiple choice questions that you had on the quiz
+
+#### sample mean and  distribution 
++ I don't understand the second comment
++ I need help coming up with a multiple choice question on how the sample compares to the population... what kind of question are you looking for?
+
