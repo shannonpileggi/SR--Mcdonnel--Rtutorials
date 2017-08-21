@@ -22,6 +22,8 @@ output: html_document
     + Well I've done a couple 'journal articles' but did not use references
     
 * Does the pedagogical context need to be supported with literature? 
+    + after the perks of datacamp--> how we see you fitting datacamp in the classroom
+    
 
 
 
