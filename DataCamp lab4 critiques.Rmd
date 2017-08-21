@@ -22,4 +22,5 @@ output: html_document
 #### sample mean and  distribution 
 + I don't understand the second comment
 + I need help coming up with a multiple choice question on how the sample compares to the population... what kind of question are you looking for?
+  * show pre programmed results+ see how resutls are different
 
