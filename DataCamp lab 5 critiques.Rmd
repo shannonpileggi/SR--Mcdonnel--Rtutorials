@@ -1,0 +1,10 @@
+---
+title: "DataCamp lab 5 critiques"
+author: "Tessa McDonnel"
+date: "8/21/2017"
+output: html_document
+---
+
+### The HELPrct data set
++ I could rename (i1) to something more fitting
++ Can i rename the whole data set? When i type it i say 'HELP  r-c-t' in my head and it's easy that way
