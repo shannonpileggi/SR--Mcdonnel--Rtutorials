@@ -1,0 +1,152 @@
+---
+title: "R Reference Guide"
+author: "Tessa McDonnel"
+date: "8/29/2017"
+output: html_document
+---
+# Questions/Notes
+
+* how detailed do you want this?
+* should I include code and output in a R chunk to go along with some of the commands?
+* should i add summary stats commands like mean(), max(), ect? We only use favstats() for the labs so idk it its necessary
+* there are a lot of functions on the existing cheat sheet that are not used in the lab, should i add these?
+* should i add getwd and setwd?
+IDK where this would go --> `sum(dataset$variable)` --> adds a column (variable) in a data set
+
+### Basics
+`install.packages("package_name")` --> installs R packages
+
+`library(package_name)` --> loads an installed R package
+
+`?function_name` --> opens the help file to learn more about an R function
+
+### Arithmetic Functions
+
+Addition: +
+
+Subtraction: -
+
+Division: /
+
+Multiplication: *
+
+Exponentiation: ^
+
+****
+
+`sqrt(x)` --> returns the square root of x
+
+`abs(x)` --> returns the absolute value of x
+
+`round(x, digits = n)` --> returns x rounded to the $n^{th}$ digit
+
+****
+
+`<, >, <=, >=` --> less/greater than, less/greater than or equal to
+`==, !=` --> equal, not equal
+
+### Exploring Data
+`head(dataset)` --> prints the first 6 entries of the data set
+
+`tail(dataset)` --> prints the last 6 entries of the data set
+
+`names(dataset)` --> shows the variable (column) names in the data set
+
+`str(dataset)` --> returns the variable names of a data set as well as their type (numeric, factor, integer, ect.)
+
+`dim(dataset)` --> shows the dimensions of the data set (ie. how many variables and subjects)
+
+### Summarizing Data
+`summary(dataset)` --> gives summary statistics of all the variables in the data set
+
+`summary(dataset$variable)` --> gives summary statistics of a specific variable in the data set
+
+`favstats(dataset$quant_var)` --> returns the mean, standard deviation and other summary statistics of a quantitative variable. 
+**Requires you to install *mosaic* package first.**
+
+`favstats(dataset$quant_var ~ dataset$categ_var)` --> returns summary statistics of a quantitative variable, by a grouping (categorical) variable
+**Requires you to install *mosaic* package first.**
+
+`table(dataset$categ_var)` --> creates a frequency table of a categorical variable
+
+`table(dataset$var1, dataset$var2)` --> creates a contingency table of two categorical variables
+
+`addmargins(my_table)` --> adds margins to a table (ie. adds row and column totals)
+
+### Random Sampling
+`sample(x = dataset$variable, size = number)` --> generates a random sample of a variable (number = desired sample size)
+
+`set.seed(number)` --> type this **before** creating a random sample to have a consistent sample
+
+
+### Visualizing Data
+`hist(dataset$quant_var)` --> creates a histogram of a quantitative variable
+
+`boxplot(dataset$quant_var)` --> creates a boxplot of a quantitative variable
+
+`plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot of two quantitative variables
+
+`boxplot(dataset$quant_var ~ dataset$categ_var)` --> creates side by side boxplots to compare a quantitative variable across the groups of a categorical variable
+
+`barplot(table(dataset$categ_var))` --> creates a barplot of a categorical variable
+
+
+## Statistical Inference
+
+#### Quantitative Data 
+`t.test(x = dataset$variable, mu = null.hyp, conf.level = 0.__, alternative = "___")` --> performs a one sample t-test and builds a confidence interval
+
+* The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
+* `alternative = "__"` can be set to "less" or "greater" for one sided hypotheses and "two.sided" for two sided hypotheses.
+* Make sure to specify `conf.level = "0.__"` as a proportion. For example, to build a 99% confidence interval type `conf.level = 0.99`.
+* `null_hyp` is a placeholder for the null hypothesis value.
+
+`t.test(dataset$quant_var ~ dataset$categ_var, var.equal = FALSE)` - performs a two sample t-test and builds a confidence interval
+
+* The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
+* You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
+
+`t.test(dataset$diff_variable, mu = 0)` --> performs a paired t-test and builds a confidence interval
+
+* `diff_variable` measures the difference between the specified dependent variables.
+* The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
+* You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
+
+`anova.results <- aov(dataset$quant_var ~ dataset$categ_var)` --> performs a one-way analysis of variance (ANOVA)
+  `summary(anova.results)` --> allows you to examine the ANOVA results
+  `TukeyHSD(anova.results)` --> Tukey adjustment for multiple comparisons
+  `plot(TukeyHSD(anova.results))` --> plot of multiple comparisons
+
+#### Categorical Data
+`prop.test(x = #yes, n = #total, p = null_hyp, correct = FALSE)` --> performs a one sample proportion test (*z*-test) and builds a confidence interval
+
+* `null_hyp` is the proportion from the null hypothesis
+* The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
+* You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
+* The argument `correct = FALSE` overrides the continuity correction.
+
+`prop.test(c(x1, x2), c(n1, n2), correct = FALSE)` --> performs a two sample proportion test (*z*-test)
+
+* The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
+* You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
+* The argument `correct = FALSE` overrides the continuity correction.
+
+`chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> performs a chi-squared test of independence
+  `results = chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> saves the chi-squared results
+  `results$expected` --> prints the expected cell counts you need to check the test assumptions
+
+
+#### Linear Regression
+`cor(dataset$var1, dataset$var2)` --> estimates the correlation between two quantitative variables
+
+`model_name <- lm(dataset$y.var ~ dataset$x.var)` --> calculates a linear model
+  `summary(model_name)` --> provides summary of the linear model
+  `coef(model_name)` --> provides coefficient estimates
+  `confint(model_name)` --> calculates confidence intervals for the regression coefficients
+  `abline(model_name)` --> adds the estimated regression equation to existing scatterplot
+
+
+
+
+
+
