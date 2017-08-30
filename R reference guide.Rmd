@@ -22,15 +22,15 @@ output: html_document
 
 ### Arithmetic Functions
 
-Addition: +
+Addition: `+`
 
-Subtraction: -
+Subtraction: `-`
 
-Division: /
+Division: `/`
 
-Multiplication: *
+Multiplication: `*`
 
-Exponentiation: ^
+Exponentiation: `^`
 
 ****
 
@@ -44,17 +44,18 @@ Exponentiation: ^
 ****
 
 `<, >, <=, >=` --> less/greater than, less/greater than or equal to
+
 `==, !=` --> equal, not equal
 
 ### Importing and Exporting Data
 
-`read.table(file="path/dat.ext"),header=TRUE)` --> read in a text file
+`read.table(file = "path/dataset_name.txt", header = TRUE)` --> read in a text file
 
-`write.table(dat,file="path/datname.txt")` --> write a text file
+`write.table(data, file = "path/dataset_name.txt")` --> write a text file
 
-`read.csv(file="path/dat.ext"),header=TRUE)` --> read a csv file **(Most of the data sets you will be working with are csv files.)**
+`read.csv(file = "path/dataset_name.csv", header = TRUE)` --> read a csv file **(Most of the data sets you will be working with are csv files.)**
 
-`write.csv(dat,file="path/datname.csv")` --> write a csv file
+`write.csv(data, file = "path/dataset_name.csv")` --> write a csv file
 
 
 ### Exploring Data
@@ -187,8 +188,6 @@ Exponentiation: ^
 `confint(model_name)` --> calculates confidence intervals for the regression coefficients
   
 `abline(model_name)` --> adds the estimated regression line to existing scatterplot
-
-
 
 ```{r echo = F, fig.width=3,fig.height=3, out.extra='style = "float:left"', fig.show='hold', fig.align='center'}
 plot(mtcars$mpg, mtcars$wt, xlab = "x", ylab = "y", main = "Normal Scatterplot", cex.main = 1)
