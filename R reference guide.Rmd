@@ -11,7 +11,7 @@ output: html_document
 * should i add summary stats commands like mean(), max(), ect? We only use favstats() for the labs so idk it its necessary
 * there are a lot of functions on the existing cheat sheet that are not used in the lab, should i add these?
 * should i add getwd and setwd?
-IDK where this would go --> `sum(dataset$variable)` --> adds a column (variable) in a data set
+
 
 ### Basics
 `install.packages("package_name")` --> installs R packages
@@ -40,10 +40,22 @@ Exponentiation: ^
 
 `round(x, digits = n)` --> returns x rounded to the $n^{th}$ digit
 
+`x <- 10` --> the command `<-` assigns the value 10 to 'x'
 ****
 
 `<, >, <=, >=` --> less/greater than, less/greater than or equal to
 `==, !=` --> equal, not equal
+
+### Importing and Exporting Data
+
+`read.table(file="path/dat.ext"),header=TRUE)` --> read in a text file
+
+`write.table(dat,file="path/datname.txt")` --> write a text file
+
+`read.csv(file="path/dat.ext"),header=TRUE)` --> read a csv file **(Most of the data sets you will be working with are csv files.)**
+
+`write.csv(dat,file="path/datname.csv")` --> write a csv file
+
 
 ### Exploring Data
 `head(dataset)` --> prints the first 6 entries of the data set
@@ -55,6 +67,20 @@ Exponentiation: ^
 `str(dataset)` --> returns the variable names of a data set as well as their type (numeric, factor, integer, ect.)
 
 `dim(dataset)` --> shows the dimensions of the data set (ie. how many variables and subjects)
+
+`dataset$variable` --> prints a specific variable within a data set
+
+`levels(dataset$categ_var)` --> shows the levels of a categorical variable in a data set
+
+### Working with Data
+`sum(dataset$variable)`: adds the values of a column (variable) in a data set
+
+`dataset$variable <- factor(dataset$variable, labels = c("variable_levels"))`: changes a variable type to factor
+
+`dataset$new_var <- dataset$var1 / dataset$var2`: creates a new variable in the data set called 'new_var' containing proportions
+
+`dataset$new_var <- dataset$var1 > dataset$var2`: creates a new variable in the data set called 'new_var' containing TRUE and FALSE values
+
 
 ### Summarizing Data
 `summary(dataset)` --> gives summary statistics of all the variables in the data set
@@ -112,10 +138,15 @@ Exponentiation: ^
 * The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
 * You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
 
+***
+
 `anova.results <- aov(dataset$quant_var ~ dataset$categ_var)` --> performs a one-way analysis of variance (ANOVA)
-  `summary(anova.results)` --> allows you to examine the ANOVA results
-  `TukeyHSD(anova.results)` --> Tukey adjustment for multiple comparisons
-  `plot(TukeyHSD(anova.results))` --> plot of multiple comparisons
+ 
+`summary(anova.results)` --> allows you to examine the ANOVA results
+
+`TukeyHSD(anova.results)` --> Tukey adjustment for multiple comparisons
+
+`plot(TukeyHSD(anova.results))` --> plot of multiple comparisons
 
 #### Categorical Data
 `prop.test(x = #yes, n = #total, p = null_hyp, correct = FALSE)` --> performs a one sample proportion test (*z*-test) and builds a confidence interval
@@ -131,21 +162,42 @@ Exponentiation: ^
 * You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
 * The argument `correct = FALSE` overrides the continuity correction.
 
+***
+
 `chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> performs a chi-squared test of independence
-  `results = chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> saves the chi-squared results
-  `results$expected` --> prints the expected cell counts you need to check the test assumptions
+  
+`results = chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> saves the chi-squared results
+  
+`results$expected` --> prints the expected cell counts you need to check the test assumptions
 
 
 #### Linear Regression
+`plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot to visualize the relationship between two quantitative variables
+
 `cor(dataset$var1, dataset$var2)` --> estimates the correlation between two quantitative variables
 
-`model_name <- lm(dataset$y.var ~ dataset$x.var)` --> calculates a linear model
-  `summary(model_name)` --> provides summary of the linear model
-  `coef(model_name)` --> provides coefficient estimates
-  `confint(model_name)` --> calculates confidence intervals for the regression coefficients
-  `abline(model_name)` --> adds the estimated regression equation to existing scatterplot
+***
+
+`model_name <- lm(dataset$y.var ~ dataset$x.var)` --> calculates a linear model and saves it to an object called 'model_name'
+  
+`summary(model_name)` --> provides a summary of the linear model
+  
+`coef(model_name)` --> provides coefficient estimates of the linear model
+  
+`confint(model_name)` --> calculates confidence intervals for the regression coefficients
+  
+`abline(model_name)` --> adds the estimated regression line to existing scatterplot
 
 
+
+```{r echo = F, fig.width=3,fig.height=3, out.extra='style = "float:left"', fig.show='hold', fig.align='center'}
+plot(mtcars$mpg, mtcars$wt, xlab = "x", ylab = "y", main = "Normal Scatterplot", cex.main = 1)
+```
+
+```{r echo = F, fig.width=3,fig.height=3, out.extra='style = "float:center"', fig.show='hold', fig.align='center'}
+plot(mtcars$mpg, mtcars$wt, xlab = "x", ylab = "y", main = "Plot with Regression Line", cex.main = 1)
+abline(lm(mtcars$wt ~ mtcars$mpg))
+```
 
 
 
