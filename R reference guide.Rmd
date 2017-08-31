@@ -6,87 +6,98 @@ output: html_document
 ---
 # Questions/Notes
 
-* how detailed do you want this?
-* should I include code and output in a R chunk to go along with some of the commands?
-* should i add summary stats commands like mean(), max(), ect? We only use favstats() for the labs so idk it its necessary
-* there are a lot of functions on the existing cheat sheet that are not used in the lab, should i add these?
-* should i add getwd and setwd?
+* should i add the graphing functions to lab one or lab three? theres much more graphing in lab 3 so im leaning towards that.
+* not adding pt() and qt() right?
+* my lab 1 datacamp lesson kinda goes over the basics so i'm not sure what to add on the reference sheet
+  + i go over variable assignment and idk if that should go in the lab 2 lesson
 
+### Lab 1 Commands
 
-### Basics
-`install.packages("package_name")` --> installs R packages
-
-`library(package_name)` --> loads an installed R package
-
-`?function_name` --> opens the help file to learn more about an R function
-
-### Arithmetic Functions
-
-Addition: `+`
-
-Subtraction: `-`
-
-Division: `/`
-
-Multiplication: `*`
-
-Exponentiation: `^`
-
-****
+Arithmetic Functions:
+Addition: `+`,
+Subtraction: `-`,
+Division: `/`,
+Multiplication: `*`,
+Exponentiation: `^`.
 
 `sqrt(x)` --> returns the square root of x
 
-`abs(x)` --> returns the absolute value of x
+`summary(dataset)` --> gives summary statistics of all the variables in the data set
 
-`round(x, digits = n)` --> returns x rounded to the $n^{th}$ digit
-
-`x <- 10` --> the command `<-` assigns the value 10 to 'x'
 ****
 
-`<, >, <=, >=` --> less/greater than, less/greater than or equal to
+`hist(dataset$quant_var)` --> creates a histogram of a quantitative variable
 
-`==, !=` --> equal, not equal
+`boxplot(dataset$quant_var)` --> creates a boxplot of a quantitative variable
 
-### Importing and Exporting Data
+`boxplot(dataset$quant_var ~ dataset$categ_var)` --> creates side by side boxplots to compare a quantitative variable across the groups of a categorical variable
 
-`read.table(file = "path/dataset_name.txt", header = TRUE)` --> read in a text file
+`plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot of two quantitative variables
 
-`write.table(data, file = "path/dataset_name.txt")` --> write a text file
+`barplot(table(dataset$categ_var))` --> creates a barplot of a categorical variable
 
-`read.csv(file = "path/dataset_name.csv", header = TRUE)` --> read a csv file **(Most of the data sets you will be working with are csv files.)**
-
-`write.csv(data, file = "path/dataset_name.csv")` --> write a csv file
+`?function_name` --> opens the help file to learn more about an R function
 
 
-### Exploring Data
+### Lab 2 Commands
+
 `head(dataset)` --> prints the first 6 entries of the data set
 
 `tail(dataset)` --> prints the last 6 entries of the data set
 
 `names(dataset)` --> shows the variable (column) names in the data set
 
-`str(dataset)` --> returns the variable names of a data set as well as their type (numeric, factor, integer, ect.)
-
 `dim(dataset)` --> shows the dimensions of the data set (ie. how many variables and subjects)
+
+****
+
+`<-` --> used to assign values to an object. For example, `x <- 10` assigns the value of 10 to x
+
+`<, >, <=, >=` --> less/greater than, less/greater than or equal to
+
+`==, !=` --> equal, not equal
+
+****
 
 `dataset$variable` --> prints a specific variable within a data set
 
-`levels(dataset$categ_var)` --> shows the levels of a categorical variable in a data set
-
-### Working with Data
-`sum(dataset$variable)`: adds the values of a column (variable) in a data set
-
-`dataset$variable <- factor(dataset$variable, labels = c("variable_levels"))`: changes a variable type to factor
-
-`dataset$new_var <- dataset$var1 / dataset$var2`: creates a new variable in the data set called 'new_var' containing proportions
-
-`dataset$new_var <- dataset$var1 > dataset$var2`: creates a new variable in the data set called 'new_var' containing TRUE and FALSE values
-
-
-### Summarizing Data
 `summary(dataset)` --> gives summary statistics of all the variables in the data set
 
 `summary(dataset$variable)` --> gives summary statistics of a specific variable in the data set
+
+`sum(dataset$variable)`: adds the values of a column (variable) in a data set
+
+`sum(dataset$var1 > dataset$var2)`: adds the number of entries where 'var1' is greater than 'var2'
+
+`dataset$new_var <- dataset$var1 / (dataset$var1 + dataset$var2)`: creates a new variable in the data set called 'new_var' containing proportions
+
+`plot(x = dataset$x_var, y = dataset$y_var, main = "Plot Title")` --> creates a scatterplot titled "Plot Title"
+
+`?plot` --> opens the R help file for the `plot` function (for basic graphical items)
+
+`?par` --> opens the R help file for all graphical items 
+
+`colors()` --> returns a list of colors to use on a graph
+
+
+### Lab 3 Commands
+
+`str(dataset)` --> returns the variable names of a data set as well as their type (numeric, factor, integer, ect.)
+
+`dataset$variable <- factor(dataset$variable, labels = c("variable_levels"))`: changes variable type to factor and adds level names
+
+****
+
+`mean(dataset$variable)` mean of variable, 
+`median(dataset$variable)` median of variable, 
+`min(dataset$variable)` minumum value of variable, 
+`max(dataset$variable)` maximum value of variable, 
+`iqr(dataset$variable)` interquartile range of variable (middle 50% of distribution), 
+`range(dataset$variable)` range of variable (the difference between the min and the max values).
+
+`install.packages("package_name")` --> installs R packages
+
+`library(package_name)` --> loads an installed R package
 
 `favstats(dataset$quant_var)` --> returns the mean, standard deviation and other summary statistics of a quantitative variable. 
 **Requires you to install *mosaic* package first.**
@@ -94,33 +105,37 @@ Exponentiation: `^`
 `favstats(dataset$quant_var ~ dataset$categ_var)` --> returns summary statistics of a quantitative variable, by a grouping (categorical) variable
 **Requires you to install *mosaic* package first.**
 
+****
+
 `table(dataset$categ_var)` --> creates a frequency table of a categorical variable
 
 `table(dataset$var1, dataset$var2)` --> creates a contingency table of two categorical variables
 
-`addmargins(my_table)` --> adds margins to a table (ie. adds row and column totals)
+`addmargins(table(dataset$var1, dataset$var2))` --> adds margins to a table (ie. adds row and column totals)
 
-### Random Sampling
-`sample(x = dataset$variable, size = number)` --> generates a random sample of a variable (number = desired sample size)
+****
 
-`set.seed(number)` --> type this **before** creating a random sample to have a consistent sample
-
-
-### Visualizing Data
 `hist(dataset$quant_var)` --> creates a histogram of a quantitative variable
 
 `boxplot(dataset$quant_var)` --> creates a boxplot of a quantitative variable
 
-`plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot of two quantitative variables
-
 `boxplot(dataset$quant_var ~ dataset$categ_var)` --> creates side by side boxplots to compare a quantitative variable across the groups of a categorical variable
+
+`plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot of two quantitative variables
 
 `barplot(table(dataset$categ_var))` --> creates a barplot of a categorical variable
 
 
-## Statistical Inference
+### Lab 4 Commands
 
-#### Quantitative Data 
+`sample(x = dataset$variable, size = number)` --> generates a random sample of a variable (number = desired sample size)
+
+`my_sample <- sample(x = dataset$variable, size = number)` --> assigns a random sample to an object called 'my_sample'
+
+`set.seed(number)` --> type this **before** creating a random sample to have a consistent sample
+
+### Lab 5 Commands
+
 `t.test(x = dataset$variable, mu = null.hyp, conf.level = 0.__, alternative = "___")` --> performs a one sample t-test and builds a confidence interval
 
 * The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
@@ -128,10 +143,24 @@ Exponentiation: `^`
 * Make sure to specify `conf.level = "0.__"` as a proportion. For example, to build a 99% confidence interval type `conf.level = 0.99`.
 * `null_hyp` is a placeholder for the null hypothesis value.
 
+**Second condition for one sample t-test**: The second condition is met if a histogram of the variable looks approximately symmetric and bell-shaped OR if sample size is greater than 30.
+
+* `favstats(dataset$variable)`: examine summary statistics (sample sizes)
+* `hist(dataset$variable)`: create histogram and examine distribution  
+
+### Lab 6 Commands
+
 `t.test(dataset$quant_var ~ dataset$categ_var, var.equal = FALSE)` - performs a two sample t-test and builds a confidence interval
 
 * The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
 * You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
+
+**Second condition for two sample t-test**: The second condition is met if a histogram of the variable looks approximately symmetric and bell-shaped OR if sample sizes in each group are greater than 30.
+
+* `favstats(dataset$quant_var ~ dataset$categ_var)`: examine summary statistics (sample sizes)
+* `hist(dataset$quant_var)`: create histogram and examine distribution  
+
+****
 
 `t.test(dataset$diff_variable, mu = 0)` --> performs a paired t-test and builds a confidence interval
 
@@ -139,7 +168,13 @@ Exponentiation: `^`
 * The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
 * You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
 
-***
+**Second condition for paired t-test**: The second condition is met if a histogram of the variable looks approximately symmetric and bell-shaped OR if sample size is greater than 30.
+
+* `favstats(dataset$diff_var)`: examine summary statistics (sample sizes) where 'diff_var' is the difference between paired measurements
+* `hist(dataset$diff_var)`: create histogram and examine distribution  
+
+
+****
 
 `anova.results <- aov(dataset$quant_var ~ dataset$categ_var)` --> performs a one-way analysis of variance (ANOVA)
  
@@ -149,7 +184,14 @@ Exponentiation: `^`
 
 `plot(TukeyHSD(anova.results))` --> plot of multiple comparisons
 
-#### Categorical Data
+**Second condition for ANOVA**: The second condition is met if a histogram of the variable looks approximately symmetric and bell-shaped OR if sample sizes in each group are greater than 30.
+
+* `favstats(dataset$quant_var ~ dataset$categ_var)`: examine summary statistics (sample sizes)
+* `hist(dataset$quant_var)`: create histogram and examine distribution  
+
+
+### Lab 7 Commands
+
 `prop.test(x = #yes, n = #total, p = null_hyp, correct = FALSE)` --> performs a one sample proportion test (*z*-test) and builds a confidence interval
 
 * `null_hyp` is the proportion from the null hypothesis
@@ -172,7 +214,8 @@ Exponentiation: `^`
 `results$expected` --> prints the expected cell counts you need to check the test assumptions
 
 
-#### Linear Regression
+### Lab 8 Commands
+
 `plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot to visualize the relationship between two quantitative variables
 
 `cor(dataset$var1, dataset$var2)` --> estimates the correlation between two quantitative variables
@@ -188,16 +231,4 @@ Exponentiation: `^`
 `confint(model_name)` --> calculates confidence intervals for the regression coefficients
   
 `abline(model_name)` --> adds the estimated regression line to existing scatterplot
-
-```{r echo = F, fig.width=3,fig.height=3, out.extra='style = "float:left"', fig.show='hold', fig.align='center'}
-plot(mtcars$mpg, mtcars$wt, xlab = "x", ylab = "y", main = "Normal Scatterplot", cex.main = 1)
-```
-
-```{r echo = F, fig.width=3,fig.height=3, out.extra='style = "float:center"', fig.show='hold', fig.align='center'}
-plot(mtcars$mpg, mtcars$wt, xlab = "x", ylab = "y", main = "Plot with Regression Line", cex.main = 1)
-abline(lm(mtcars$wt ~ mtcars$mpg))
-```
-
-
-
 
