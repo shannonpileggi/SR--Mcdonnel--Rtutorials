@@ -7,9 +7,10 @@ output: html_document
 # Questions/Notes
 
 * should i add the graphing functions to lab one or lab three? theres much more graphing in lab 3 so im leaning towards that.
-* not adding pt() and qt() right?
+* not adding pt() and qt() right? the applet is better for that i think
 * my lab 1 datacamp lesson kinda goes over the basics so i'm not sure what to add on the reference sheet
   + i go over variable assignment and idk if that should go in the lab 2 lesson
+* for lab 7 question 7, will students know to make a contingency table? or should i add this in the lab 7 section
 
 ### Lab 1 Commands
 
@@ -51,11 +52,11 @@ Exponentiation: `^`.
 
 ****
 
-`<-` --> used to assign values to an object. For example, `x <- 10` assigns the value of 10 to x
+`<-`: used to assign values to an object. For example, `x <- 10` assigns the value of 10 to an object named 'x'
 
-`<, >, <=, >=` --> less/greater than, less/greater than or equal to
+`<, >, <=, >=`: less/greater than, less/greater than or equal to
 
-`==, !=` --> equal, not equal
+`==, !=`: equal, not equal
 
 ****
 
@@ -100,10 +101,10 @@ Exponentiation: `^`.
 `library(package_name)` --> loads an installed R package
 
 `favstats(dataset$quant_var)` --> returns the mean, standard deviation and other summary statistics of a quantitative variable. 
-**Requires you to install *mosaic* package first.**
+**Requires you to install and load *mosaic* package first.**
 
 `favstats(dataset$quant_var ~ dataset$categ_var)` --> returns summary statistics of a quantitative variable, by a grouping (categorical) variable
-**Requires you to install *mosaic* package first.**
+**Requires you to install and load *mosaic* package first.**
 
 ****
 
@@ -192,6 +193,8 @@ Exponentiation: `^`.
 
 ### Lab 7 Commands
 
+`table(dataset$categ_var)` --> creates table you need for sample proportion
+
 `prop.test(x = #yes, n = #total, p = null_hyp, correct = FALSE)` --> performs a one sample proportion test (*z*-test) and builds a confidence interval
 
 * `null_hyp` is the proportion from the null hypothesis
@@ -199,20 +202,27 @@ Exponentiation: `^`.
 * You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
 * The argument `correct = FALSE` overrides the continuity correction.
 
+****
+
+`table(dataset$var1, dataset$var2)` --> creates contingency table to find the two proportions
+
 `prop.test(c(x1, x2), c(n1, n2), correct = FALSE)` --> performs a two sample proportion test (*z*-test)
 
+* `x1` = number 'success' in group 1, `x2` = number success in groupn 2, `n1` = total number in group 1, `n2` = total number in group 2
 * The default settings are to test a two sided alternative hypothesis and to calculate a 95% confidence interval.
 * You can specify `alternative = "__"` and `conf.level = 0.__` to perform one sided tests and change the confidence level.
 * The argument `correct = FALSE` overrides the continuity correction.
 
-***
+****
 
-`chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> performs a chi-squared test of independence
-  
-`results = chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> saves the chi-squared results
-  
-`results$expected` --> prints the expected cell counts you need to check the test assumptions
+`table(dataset$var1, dataset$var2)` --> creates contingency table to examine the relationship between two variables
 
+`chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> performs a chi-squared test of independence (when there are more than two groups to compare)
+
+**Assumption of the Chi-squared test**: All expected cell counts should be at least 5.
+
+* `results = chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> saves the chi-squared results
+* `results$expected` --> prints the expected cell counts you need to check the test assumptions (all expected cell counts are at least 5)
 
 ### Lab 8 Commands
 
