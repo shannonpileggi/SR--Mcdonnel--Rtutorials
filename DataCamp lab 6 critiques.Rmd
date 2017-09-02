@@ -1,17 +1,39 @@
 ---
-title: "DataCamp Lab 6 critiques"
+title: "DataCamp Lab 6/7 critiques"
 author: "Tessa McDonnel"
 date: "8/30/2017"
 output: html_document
 ---
 
-### Two sample t-test
+### Lab 6
+
+###### Two sample t-test
 
 * I'm still having trouble with the subscripts... Weston gave me a few suggestions but they didnt work.
 
-### Summarizing Tukey plots
+###### Summarizing Tukey plots
 * I dont understand the last comment... where do you want me to state that?
 
 
-### Comments
+###### Comments
 * it is super long... but this lab has so much good stuff! We could definitely take some stuff out
+
+
+### Lab 7
+
+* for one-sample z-test, what is the last comment? (In the R script...)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
