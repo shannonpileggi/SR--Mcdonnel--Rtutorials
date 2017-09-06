@@ -1,0 +1,36 @@
+---
+title: "Questions for 9/7 meeting"
+author: "Tessa McDonnel"
+date: "9/5/2017"
+output: html_document
+---
+
+### DataCamp Questions
+
+* DataCamp provides a style guide that follows Hadley Wickham... currently the course does not follow the correct style for function calls (they say to not call the first argument by name)
+
+* Lab 2 'working with variables' exercise: I'm not sure if I understand the first comment
+
+* Email for Lab 7 of datacamp: one-sample z-test, what is the last comment? (In the R script...)
+
+* I've gone through all of the labs and believe that we are all set to publish!
+
+
+**Go through the reference sheet guide and questions**
+
+### TISE questions
+
+1) should i add more about how it can be used in a flipped classroom?
+
+2) how to get side by side pictures (for the teach editor code vs. preview)?
+
+3) also, what is the best way to add pictures? They are not inserted in the pdf where i have the code
+
+4) what are the bottom comments about the citations?
+
+5) should i add that the courses are written in Hadley Wickham style?
+
+
+
+
+
