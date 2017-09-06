@@ -8,8 +8,6 @@ output: html_document
 
 * should i add the graphing functions to lab one or lab three? theres much more graphing in lab 3 so im leaning towards that.
 * not adding pt() and qt() right? the applet is better for that i think
-* my lab 1 datacamp lesson kinda goes over the basics so i'm not sure what to add on the reference sheet
-  + i go over variable assignment and idk if that should go in the lab 2 lesson
 * for lab 7 question 7, will students know to make a contingency table? or should i add this in the lab 7 section
 
 ### Lab 1 Commands
