@@ -4,11 +4,6 @@ author: "Tessa McDonnel"
 date: "8/29/2017"
 output: html_document
 ---
-# Questions/Notes
-
-* should i add the graphing functions to lab one or lab three? theres much more graphing in lab 3 so im leaning towards that.
-* not adding pt() and qt() right? the applet is better for that i think
-* for lab 7 question 7, will students know to make a contingency table? or should i add this in the lab 7 section
 
 ### Lab 1 Commands
 
@@ -23,19 +18,8 @@ Exponentiation: `^`.
 
 `summary(dataset)` --> gives summary statistics of all the variables in the data set
 
-****
-
-`hist(dataset$quant_var)` --> creates a histogram of a quantitative variable
-
-`boxplot(dataset$quant_var)` --> creates a boxplot of a quantitative variable
-
-`boxplot(dataset$quant_var ~ dataset$categ_var)` --> creates side by side boxplots to compare a quantitative variable across the groups of a categorical variable
-
 `plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot of two quantitative variables
 
-`barplot(table(dataset$categ_var))` --> creates a barplot of a categorical variable
-
-`?function_name` --> opens the help file to learn more about an R function
 
 
 ### Lab 2 Commands
@@ -77,6 +61,9 @@ Exponentiation: `^`.
 `?par` --> opens the R help file for all graphical items 
 
 `colors()` --> returns a list of colors to use on a graph
+
+`?function_name` --> opens the help file to learn more about an R function
+
 
 
 ### Lab 3 Commands
@@ -120,9 +107,8 @@ Exponentiation: `^`.
 
 `boxplot(dataset$quant_var ~ dataset$categ_var)` --> creates side by side boxplots to compare a quantitative variable across the groups of a categorical variable
 
-`plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot of two quantitative variables
-
 `barplot(table(dataset$categ_var))` --> creates a barplot of a categorical variable
+
 
 
 ### Lab 4 Commands
@@ -132,6 +118,8 @@ Exponentiation: `^`.
 `my_sample <- sample(x = dataset$variable, size = number)` --> assigns a random sample to an object called 'my_sample'
 
 `set.seed(number)` --> type this **before** creating a random sample to have a consistent sample
+
+
 
 ### Lab 5 Commands
 
@@ -146,6 +134,8 @@ Exponentiation: `^`.
 
 * `favstats(dataset$variable)`: examine summary statistics (sample sizes)
 * `hist(dataset$variable)`: create histogram and examine distribution  
+
+
 
 ### Lab 6 Commands
 
@@ -189,9 +179,8 @@ Exponentiation: `^`.
 * `hist(dataset$quant_var)`: create histogram and examine distribution  
 
 
-### Lab 7 Commands
 
-`table(dataset$categ_var)` --> creates table you need for sample proportion
+### Lab 7 Commands
 
 `prop.test(x = #yes, n = #total, p = null_hyp, correct = FALSE)` --> performs a one sample proportion test (*z*-test) and builds a confidence interval
 
@@ -202,8 +191,6 @@ Exponentiation: `^`.
 
 ****
 
-`table(dataset$var1, dataset$var2)` --> creates contingency table to find the two proportions
-
 `prop.test(c(x1, x2), c(n1, n2), correct = FALSE)` --> performs a two sample proportion test (*z*-test)
 
 * `x1` = number 'success' in group 1, `x2` = number success in groupn 2, `n1` = total number in group 1, `n2` = total number in group 2
@@ -213,8 +200,6 @@ Exponentiation: `^`.
 
 ****
 
-`table(dataset$var1, dataset$var2)` --> creates contingency table to examine the relationship between two variables
-
 `chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> performs a chi-squared test of independence (when there are more than two groups to compare)
 
 **Assumption of the Chi-squared test**: All expected cell counts should be at least 5.
@@ -222,9 +207,9 @@ Exponentiation: `^`.
 * `results = chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> saves the chi-squared results
 * `results$expected` --> prints the expected cell counts you need to check the test assumptions (all expected cell counts are at least 5)
 
-### Lab 8 Commands
 
-`plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot to visualize the relationship between two quantitative variables
+
+### Lab 8 Commands
 
 `cor(dataset$var1, dataset$var2)` --> estimates the correlation between two quantitative variables
 
