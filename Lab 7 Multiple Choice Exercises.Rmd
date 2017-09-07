@@ -1,0 +1,42 @@
+---
+title: "Lab 7 Multiple Choice Exercises"
+author: "Tessa McDonnel"
+date: "9/7/2017"
+output: html_document
+---
+
+
+\begin{verbatim}
+
+--- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:5a24579348
+## Quick check 1
+The *Plots* panel contains the histogram of the number of absent days from the last exercise. 
+
+The `favstats()` results from the last exercise are stored in an object called `results`; in your R console type `results` to view these.
+
+Question: Does the `absent` days variable from `schooldays` follow the second condition?
+
+*Remember, the second condition is met if a histogram of the variable looks approximately symmetric and bell-shaped OR if sample sizes in each group are greater than 30.*
+*** =instructions
+- No, because the histogram is right-skewed and the sample sizes for each group are too small.
+- Yes, the histogram is right-skewed but the sample sizes are over 30. 
+- No, because the sample sizes for each group are too small.
+- Yes, the histogram looks approximately normal even though the sample sizes are too small.
+*** =hint
+Since the tail of the distribution is on the right side, it is right-skewed. Type `results` to view the sample sizes in each racial group.
+*** =pre_exercise_code
+```{r}
+library(HSAUR)
+library(mosaic)
+results <- favstats(schooldays$absent ~ schooldays$race)
+hist(schooldays$absent)
+```
+
+*** =sct
+```{r}
+msg_bad <- "That is not correct. The distribution is very right skewed but the sample sizes are large."
+msg_success <- "Exactly!"
+test_mc(correct = 2, feedback_msgs = c(msg_bad, msg_success, msg_bad, msg_bad))
+```
+
+\end{verbatim}
