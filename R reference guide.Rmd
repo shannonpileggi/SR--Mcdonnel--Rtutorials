@@ -3,24 +3,13 @@ title: "R Reference Guide"
 output: html_document
 ---
 
-### Lab 1 Commands
+# {.tabset}
 
-Arithmetic Functions:
-Addition: `+`,
-Subtraction: `-`,
-Division: `/`,
-Multiplication: `*`,
-Exponentiation: `^`.
+## RMarkdown 
 
-`sqrt(x)` --> returns the square root of x
+### RMarkdown header and getting started chunks
 
-`summary(dataset)` --> gives summary statistics of all the variables in the data set
-
-`plot(x = dataset$x_var, y = dataset$y_var)` --> creates a scatterplot of two quantitative variables
-
-
-
-### Lab 2 RMarkdown Commands
+<br>
 
 ##### Include this header at the top of all Rmarkdown documents
 <pre><code>
@@ -32,6 +21,8 @@ output: html_document
 ---
 </code></pre>
 
+<br>
+
 ##### Include this set up chunk after your header to load your libraries
 <pre><code>```{r setup, include=FALSE}
 #Load your libraries
@@ -39,6 +30,7 @@ library(mosaic)
 library(readr)
 ```</code></pre>
 
+<br>
 
 ##### Insert data import code into this chunk
 <pre><code>```{r importdata, message = F}
@@ -46,134 +38,270 @@ library(readr)
 
 ```</code></pre>
 
+## Lab 1 
 
-### Lab 2 R Commands
+### Lab 1 Commands
 
-`head(dataset)` --> prints the first 6 entries of the data set
+<br>
 
-`tail(dataset)` --> prints the last 6 entries of the data set
+##### Arithmetic operations
 
-`names(dataset)` --> shows the variable (column) names in the data set
+addition `+`
 
-`dim(dataset)` --> shows the dimensions of the data set (ie. how many variables and observations)
+subtraction `-`
+
+division `/`
+
+multiplication `*`
+
+exponentiation `^`
+
+`sqrt(x)` returns the square root of x
+
+_Note:_ `5*3` returns `15`; `5(3)` results in an error
 
 ****
 
-`<-`: used to assign values to an object. For example, `x <- 10` assigns the value of 10 to an object named `x`
+<br>
 
-`<, >, <=, >=`: less/greater than, less/greater than or equal to
+##### Summary statistics
 
-`==, !=`: equal to, not equal to
+`summary(dataset)` gives summary statistics of all the variables in the data set
 
 ****
 
-`dataset$variable` --> accesses `variable` within `dataset`
+<br>
 
-`summary(dataset$variable)` --> gives summary statistics of `variable` in `dataset`
+##### Scatterplot
 
-`sum(dataset$variable)`: adds the values of `variable` in `dataset`
+`plot(x = dataset$x_var, y = dataset$y_var)` creates a scatterplot of two quantitative variables
 
-`sum(dataset$var1 > dataset$var2)`: counts the number of entries where 'var1' is greater than 'var2'
+****
 
-`dataset$new_var <- dataset$var1 / (dataset$var1 + dataset$var2)`: creates a new variable in the data set called 'new_var' as a result of this mathematical expression
+## Lab 2 
 
-`plot(x = dataset$x_var, y = dataset$y_var, main = "Plot Title")` --> creates a scatterplot titled `Plot Title`
+### Lab 2 Commands
 
-`colors()` --> returns a list of colors available in R
+<br>
 
-`?function_name` --> opens the help file to learn more about an R function. For example, `?plot` for help with basic plotting options, and `?par` for help with all graphing options.
+##### Getting to know your data set
 
+`head(dataset)` prints the first 6 entries of the data set
 
+`tail(dataset)` prints the last 6 entries of the data set
+
+`names(dataset)` shows the variable (column) names in the data set
+
+`dim(dataset)` shows the dimensions of the data set (ie. how many variables and observations)
+
+****
+
+<br>
+
+##### Logical comparisons
+
+`<, >, <=, >=` less/greater than, less/greater than or equal to
+
+`==, !=` equal to, not equal to
+
+****
+
+<br>
+
+##### Working with variables
+
+`dataset$variable` accesses `variable` within `dataset`
+
+`summary(dataset$variable)` gives summary statistics of `variable` in `dataset`
+
+`sum(dataset$variable)` adds the values of `variable` in `dataset`
+
+`sum(dataset$var1 > dataset$var2)` counts the number of entries where 'var1' is greater than 'var2'
+
+`dataset$new_var <- dataset$var1 / (dataset$var1 + dataset$var2)` creates a new variable in the data set called 'new_var' as a result of this mathematical expression
+
+****
+
+<br>
+
+##### Miscellaneous
+
+`<-` used to assign values to an object. For example, `x <- 10` assigns the value of 10 to an object named `x`
+
+`colors()` returns a list of colors available in R
+
+`?function_name`opens the help file to learn more about an R function. For example, `?plot` for help with basic plotting options, and `?par` for help with all graphing options.
+
+`plot(x = dataset$x_var, y = dataset$y_var, main = "Plot Title")` creates a scatterplot titled `Plot Title`
+
+****
+
+## Lab 3 
 
 ### Lab 3 Commands
 
-`str(dataset)` --> returns the number of observations, number of variables, variable names, and variable types of `dataset`
+<br>
+
+##### Miscellaneous
+
+`library(package_name)` loads an installed R package.  For example, `library(mosaic)` 
+
+`str(dataset)` returns the number of observations, number of variables, variable names, and variable types of `dataset`
 
 `dataset$variable <- factor(dataset$variable, labels = c("value 1","value 2"))`: changes `variable` type to factor and adds labels
 
 ****
-Single summary statistics of `variable` in `dataset`:`mean(dataset$variable)`, `median(dataset$variable)`, `sd(dataset$variable)`, `min(dataset$variable)`, `max(dataset$variable)`, `IQR(dataset$variable)`, `range(dataset$variable)` 
+
+<br>
+
+##### Summary statistics for quantitative variables
+
+`mean(dataset$variable)`
+
+`median(dataset$variable)`
+
+`sd(dataset$variable)`
+
+`min(dataset$variable)`
+
+`max(dataset$variable)`
+
+`IQR(dataset$variable)`
+
+`range(dataset$variable)` 
 
 ****
-`library(package_name)` --> loads an installed R package.  For example, `library(mosaic)` 
 
-****
-**Requires you to load the *mosaic* package first.**
+_Requires you to load the mosaic package first._
 
-`favstats(dataset$quant_var)` --> returns the mean, standard deviation and other summary statistics of a quantitative variable. 
+`favstats(dataset$quant_var)` returns the mean, standard deviation and other summary statistics of a quantitative variable. 
 
-`favstats(dataset$quant_var ~ dataset$categ_var)` --> returns summary statistics of a quantitative variable, by a grouping (categorical) variable
-
+`favstats(dataset$quant_var ~ dataset$categ_var)` returns summary statistics of a quantitative variable, by a grouping (categorical) variable
 
 ****
 
-`table(dataset$categ_var)` --> creates a frequency table of a categorical variable
+<br>
 
-`table(dataset$var1, dataset$var2)` --> creates a contingency table of two categorical variables
+##### Summary statistics for categorical variables
 
-`addmargins(table(dataset$var1, dataset$var2))` --> adds margins to a table (ie. adds row and column totals)
+`table(dataset$categ_var)` creates a frequency table of a categorical variable
+
+`table(dataset$var1, dataset$var2)` creates a contingency table of two categorical variables
+
+`addmargins(table(dataset$var1, dataset$var2))` adds margins to a table (ie. adds row and column totals)
 
 ****
 
-`hist(dataset$quant_var)` --> creates a histogram of a quantitative variable
+<br>
 
-`boxplot(dataset$quant_var)` --> creates a boxplot of a quantitative variable
+##### Figures
 
-`boxplot(dataset$quant_var ~ dataset$categ_var)` --> creates side by side boxplots to compare a quantitative variable across the groups of a categorical variable
+`hist(dataset$quant_var)` creates a histogram of a quantitative variable
 
-`barplot(table(dataset$categ_var))` --> creates a barplot of a categorical variable
+`boxplot(dataset$quant_var)` creates a boxplot of a quantitative variable
 
+`boxplot(dataset$quant_var ~ dataset$categ_var)` creates side by side boxplots to compare a quantitative variable across the groups of a categorical variable
 
+`barplot(table(dataset$categ_var))` creates a barplot of a categorical variable
+
+****
+
+## Lab 4
 
 ### Lab 4 Commands
 
-`sample(x = dataset$variable, size = number)` --> generates a random sample of values from `variable` in `dataset` (number = desired sample size)
 
-`my_sample <- sample(x = dataset$variable, size = number)` --> assigns a random sample to an object called 'my_sample'
+<br>
 
-`set.seed(number)` --> type this **before** creating a random sample to have a consistent sample
+##### Generating random samples
+
+`sample(x = dataset$variable, size = number)` generates a random sample of values from `variable` in `dataset` (number = desired sample size)
+
+`my_sample <- sample(x = dataset$variable, size = number)` assigns a random sample to an object called 'my_sample'
+
+`set.seed(number)` type this **before** creating a random sample to have a consistent sample
+
+****
 
 
+## Lab 5 
 
 ### Lab 5 Commands
 
-`t.test(x = dataset$variable, mu = value, conf.level = 0.95, alternative = "two.sided")` --> performs a _one sample t-test_ and computes a confidence interval (i.e., $H_0$: $\mu=value$ vs $H_a$: $\mu\neq value$)
+<br>
+
+##### One sample t-test
+
+###### $H_0$: $\mu=value$ vs $H_a$: $\mu\neq value$ 
+
+`t.test(x = dataset$variable, mu = value, conf.level = 0.95, alternative = "two.sided")` performs a _one sample t-test_ and computes a confidence interval 
 
 * `value` is a placeholder for the null hypothesis value.
 * Make sure to specify `conf.level = "0.__"` as a proportion. For example, to compute a 99% confidence interval type `conf.level = 0.99`.
 * `alternative` can also be set to `"less"` or `"greater"` 
 * The _default_ settings are `conf.level = 0.95` and `alternative = "two.sided"` .
 
+****
+
+## Lab 6 
+
 ### Lab 6 Commands
 
-`t.test(dataset$quant_var ~ dataset$categ_var, var.equal = FALSE)` - performs a _two sample t-test_ and computes a confidence interval (i.e., $H_0$: $\mu_1=\mu_2$ vs $H_a$: $\mu_1\neq \mu_2$)
+<br>
+
+##### Two sample t-test
+
+###### $H_0$: $\mu_1=\mu_2$ vs $H_a$: $\mu_1\neq \mu_2$
+
+`t.test(dataset$quant_var ~ dataset$categ_var, var.equal = FALSE)` performs a _two sample t-test_ and computes a confidence interval 
 
 * The `var.equal = FALSE` signifies that we are computing the two-sample t-test under the assumption of _unequal variances_ in the two groups.
 * The _default_ settings are `conf.level = 0.95` and `alternative = "two.sided"`.
 
 ****
 
-`t.test(dataset$diff_variable, mu = 0)` --> performs a _paired t-test_ and computes a confidence interval (i.e., $H_0$: $\mu_d=0$ vs $H_a$: $\mu_d\neq 0$)
+<br>
+
+##### Paired t-test
+
+######  $H_0$: $\mu_d=0$ vs $H_a$: $\mu_d\neq 0$
+
+
+`t.test(dataset$diff_variable, mu = 0)` performs a _paired t-test_ and computes a confidence interval 
 
 * `diff_variable` calculates the difference between the two paired variables.
 * The `mu = 0` argument signifies that we are testing the null hypothesis that the population mean difference equals zero
 * The _default_ settings are `conf.level = 0.95` and `alternative = "two.sided"`.
 
+****
+
+<br>
+
+##### ANOVA
+
+######  $H_0$: $\mu_1=\mu_2=\mu_3...$ vs $H_a$: at least one $\mu$ differs
+
+`anova_results <- aov(dataset$quant_var ~ dataset$categ_var)` performs a one-way analysis of variance (ANOVA) 
+ 
+`summary(anova_results)` allows you to examine the ANOVA results
+
+`TukeyHSD(anova_results)` Tukey adjustment for multiple comparisons
+
+`plot(TukeyHSD(anova_results))` plot of multiple comparisons
 
 ****
 
-`anova_results <- aov(dataset$quant_var ~ dataset$categ_var)` --> performs a one-way analysis of variance (ANOVA) (i.e., $H_0$: $\mu_1=\mu_2=\mu_3...$ vs $H_a$: at least one $\mu$ differs)
- 
-`summary(anova_results)` --> allows you to examine the ANOVA results
-
-`TukeyHSD(anova_results)` --> Tukey adjustment for multiple comparisons
-
-`plot(TukeyHSD(anova_results))` --> plot of multiple comparisons
-
+## Lab 7 
 
 ### Lab 7 Commands
 
-`prop.test(x = #yes, n = #total, p = value, correct = FALSE)` --> performs a _one sample z-test_ and computes a confidence interval (i.e., $H_0$: $p=value$ vs $H_a$: $p\neq value$)
+<br>
+
+##### One sample z-test
+
+######  $H_0$: $p=value$ vs $H_a$: $p\neq value$
+
+`prop.test(x = #yes, n = #total, p = value, correct = FALSE)` performs a _one sample z-test_ and computes a confidence interval 
 
 * `#yes` is a placeholder for the number of 'successes'
 * `#total` is a placeholder for the total number of observations
@@ -181,39 +309,61 @@ Single summary statistics of `variable` in `dataset`:`mean(dataset$variable)`, `
 * The argument `correct = FALSE` overrides the continuity correction.
 * The _default_ settings are `conf.level = 0.95` and `alternative = "two.sided"`
 
-
 ****
 
-`prop.test(c(x1, x2), c(n1, n2), correct = FALSE)` --> performs a _two sample z-test_ (i.e., $H_0$: $p_1=p_2$ vs $H_a$: $p_1\neq p_2$)
+<br>
 
-* `x1`, `x2` = number 'successes' in group 1 and 2, respectively
-* `n1`, `n2` = total number of observations in group 1 and 2, respectively
+##### Two sample z-test
+
+######  $H_0$: $p_1=p_2$ vs $H_a$: $p_1\neq p_2$
+
+`prop.test(c(x1, x2), c(n1, n2), correct = FALSE)` performs a _two sample z-test_ 
+
+* `x1`, `x2` are the number 'successes' in group 1 and 2, respectively
+* `n1`, `n2` are the total number of observations in group 1 and 2, respectively
 * The argument `correct = FALSE` overrides the continuity correction.
 * The _default_ settings are `conf.level = 0.95` and `alternative = "two.sided"`
 
+****
+
+<br>
+
+##### Chi-squared test
+
+######  $H_0$: there is no association between `var1` and `var2` versus $H_a$: there is an association between `var1` and `var2`
+
+`chisq.test(dataset$var1, dataset$var2, correct=FALSE)` performs a chi-squared test of association 
+
+* `results <- chisq.test(dataset$var1, dataset$var2, correct=FALSE)` saves the chi-squared test results
+* `results$expected` prints the expected cell counts 
 
 ****
 
-`chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> performs a chi-squared test of association (i.e., $H_0$: there is no association between `var1` and `var2` versus $H_a$: there is an association between `var1` and `var2`)
 
-* `results <- chisq.test(dataset$var1, dataset$var2, correct=FALSE)` --> saves the chi-squared results
-* `results$expected` --> prints the expected cell counts 
-
-
+## Lab 8 
 
 ### Lab 8 Commands
 
-`cor(dataset$var1, dataset$var2)` --> estimates the correlation between `var1` and `var2`
+<br>
 
-***
+##### Correlation
 
-`model_name <- lm(dataset$y.var ~ dataset$x.var)` --> calculates a linear model and saves it to an object called 'model_name'
-  
-`summary(model_name)` --> provides a summary of the linear model
-  
-`coef(model_name)` --> provides coefficient estimates of the linear model
-  
-`confint(model_name)` --> calculates confidence intervals for the regression coefficients
-  
-`abline(model_name)` --> adds the estimated regression line to existing scatterplot (must execute `plot(x = dataset$x.var, y = dataset$y.var)` first)
+`cor(dataset$var1, dataset$var2)` estimates the correlation between `var1` and `var2`
 
+****
+
+<br>
+
+##### Linear regression
+
+`model_name <- lm(dataset$y.var ~ dataset$x.var)` calculates a linear model and saves it to an object called 'model_name'
+  
+`summary(model_name)` provides a summary of the linear model
+  
+`coef(model_name)` provides coefficient estimates of the linear model
+  
+`confint(model_name)` calculates confidence intervals for the regression coefficients
+  
+`abline(model_name)` adds the estimated regression line to existing scatterplot (must execute `plot(x = dataset$x.var, y = dataset$y.var)` first)
+
+****
