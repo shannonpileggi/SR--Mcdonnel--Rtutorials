@@ -85,7 +85,7 @@ success_msg("Nice job. Look at the R output, do you think this data meets the se
 
 
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:5a24579348
-## Quick check 1
+## Quick check: t-test assumptions
 The *Plots* panel contains the histogram of the number of absent days from the last exercise. 
 
 The `favstats()` results from the last exercise are stored in an object called `results`; in your R console type `results` to view these.
