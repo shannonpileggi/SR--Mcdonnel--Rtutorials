@@ -38,6 +38,34 @@ library(readr)
 
 ```</code></pre>
 
+## Importing 
+
+### Steps to save import code in an R chunk
+
+<br>
+
+1. In the upper right hand corner of RStudio, click on the `Environment` tab.
+
+2. In the `Environment` tab, click on `Import Dataset -> From CSV`.
+
+3. Navigate to where the data set is stored on your computer.
+
+4. Make any necessary changes in the import settings.
+
+5. Click `Import`.
+
+6. In the upper right hand corner of RStudio, click on the `History` tab.
+
+7. Click on the line of code that says `read_csv` - this is the code that was generated to import the data set.  It should turn blue when you click on it.
+
+8. Place your cursor in the R chunk that states _"Include code here to import the data"_.
+
+9. In the upper right hand corner of RStudio, under the `History` tab, click on `To Source`.
+
+10. Verify that the import code is now in your R chunk.
+
+****
+
 ## Lab 1 
 
 ### Lab 1 Commands
@@ -148,7 +176,7 @@ _Note:_ `5*3` returns `15`; `5(3)` results in an error
 
 `str(dataset)` returns the number of observations, number of variables, variable names, and variable types of `dataset`
 
-`dataset$variable <- factor(dataset$variable, labels = c("value 1","value 2"))`: changes `variable` type to factor and adds labels
+`dataset$variable <- factor(dataset$variable, labels = c("value 1","value 2"))` changes `variable` type to factor and adds labels
 
 ****
 
