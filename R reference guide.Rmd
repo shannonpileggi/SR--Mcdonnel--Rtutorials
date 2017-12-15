@@ -27,13 +27,12 @@ output: html_document
 <pre><code>```{r setup, include=FALSE}
 #Load your libraries
 library(mosaic)
-library(readr)
 ```</code></pre>
 
 <br>
 
 ##### Insert data import code into this chunk
-<pre><code>```{r importdata, message = F}
+<pre><code>```{r}
 #Include code here to import the data
 
 ```</code></pre>
@@ -46,7 +45,7 @@ library(readr)
 
 1. In the upper right hand corner of RStudio, click on the `Environment` tab.
 
-2. In the `Environment` tab, click on `Import Dataset -> From CSV`.
+2. In the `Environment` tab, click on `Import Dataset -> From Text (base)...`.
 
 3. Navigate to where the data set is stored on your computer.
 
@@ -56,7 +55,7 @@ library(readr)
 
 6. In the upper right hand corner of RStudio, click on the `History` tab.
 
-7. Click on the line of code that says `read_csv` - this is the code that was generated to import the data set.  It should turn blue when you click on it.
+7. Click on the line of code that says `read.csv` - this is the code that was generated to import the data set.  It should turn blue when you click on it.
 
 8. Place your cursor in the R chunk that states _"Include code here to import the data"_.
 
@@ -260,7 +259,7 @@ _Requires you to load the mosaic package first._
 
 ##### One sample t-test
 
-###### $H_0$: $\mu=value$ vs $H_a$: $\mu\neq value$ 
+###### $H_0$: $\mu=value$ \ vs $H_a$: $\mu\neq value$ 
 
 `t.test(x = dataset$variable, mu = value, conf.level = 0.95, alternative = "two.sided")` performs a _one sample t-test_ and computes a confidence interval 
 
@@ -282,6 +281,8 @@ _Requires you to load the mosaic package first._
 ###### $H_0$: $\mu_1=\mu_2$ vs $H_a$: $\mu_1\neq \mu_2$
 
 `t.test(dataset$quant_var ~ dataset$categ_var, var.equal = FALSE)` performs a _two sample t-test_ and computes a confidence interval 
+
+`t.test(quant_var ~ categ_var, data = dataset, var.equal = FALSE)` should work equivalently to the code above.  If the top method doesn't work try this one - R may have recently had an update and I experienced difficuly with the top method.
 
 * The `var.equal = FALSE` signifies that we are computing the two-sample t-test under the assumption of _unequal variances_ in the two groups.
 * The _default_ settings are `conf.level = 0.95` and `alternative = "two.sided"`.
@@ -327,7 +328,7 @@ _Requires you to load the mosaic package first._
 
 ##### One sample z-test
 
-######  $H_0$: $p=value$ vs $H_a$: $p\neq value$
+######  $H_0$: $p=value$ \ vs $H_a$: $p\neq value$
 
 `prop.test(x = #yes, n = #total, p = value, correct = FALSE)` performs a _one sample z-test_ and computes a confidence interval 
 
@@ -384,7 +385,7 @@ _Requires you to load the mosaic package first._
 
 ##### Linear regression
 
-`model_name <- lm(dataset$y.var ~ dataset$x.var)` calculates a linear model and saves it to an object called 'model_name'
+`model_name <- lm(dataset$y_var ~ dataset$x_var)` calculates a linear model and saves it to an object called 'model_name'
   
 `summary(model_name)` provides a summary of the linear model
   
@@ -392,6 +393,6 @@ _Requires you to load the mosaic package first._
   
 `confint(model_name)` calculates confidence intervals for the regression coefficients
   
-`abline(model_name)` adds the estimated regression line to existing scatterplot (must execute `plot(x = dataset$x.var, y = dataset$y.var)` first)
+`abline(model_name)` adds the estimated regression line to existing scatterplot (must execute `plot(x = dataset$x_var, y = dataset$y_var)` first)
 
 ****
