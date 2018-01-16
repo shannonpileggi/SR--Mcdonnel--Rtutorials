@@ -159,7 +159,9 @@ _Note:_ `5*3` returns `15`; `5(3)` results in an error
 
 `?function_name`opens the help file to learn more about an R function. For example, `?plot` for help with basic plotting options, and `?par` for help with all graphing options.
 
-`plot(x = dataset$x_var, y = dataset$y_var, main = "Plot Title", xlab = "x axis label", ylab = "y axis label")` creates a scatterplot with a title and axis labels
+`plot(x = dataset$x_var, y = dataset$y_var, main = "Plot Title", xlab = "x axis label", ylab = "y axis label", type = "p")` creates a scatterplot with a title and axis labels.  
+
+* type = specifies the plotting type, where "p" creates points, "l" creates lines, etc.
 
 ****
 
