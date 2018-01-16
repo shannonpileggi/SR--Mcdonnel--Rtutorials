@@ -121,6 +121,8 @@ _Note:_ `5*3` returns `15`; `5(3)` results in an error
 
 `dim(dataset)` shows the dimensions of the data set (ie. how many variables and observations)
 
+`summary(dataset)` gives a numeric summary of all variables in the data set
+
 ****
 
 <br>
