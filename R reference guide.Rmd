@@ -63,6 +63,11 @@ library(mosaic)
 
 10. Verify that the import code is now in your R chunk.
 
+11. You may need to make minor modifications to this code.  
+
+* If your code says `read_csv`, change this to `read.csv`.  
+* If you have an option that says `header=FALSE`, change this to `header=TRUE`.
+
 ****
 
 ## Lab 1 
