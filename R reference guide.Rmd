@@ -5,15 +5,14 @@ output: html_document
 
 # {.tabset}
 
-## RMarkdown 
+## Getting started
 
 ### RMarkdown header and getting started chunks
 
 <br>
 
-##### Include this header at the top of all Rmarkdown documents
-<pre><code>
----
+##### Include this header at the top of all Rmarkdown documents.  
+<pre><code>---
 title: "Lab X Practice"
 author: "Insert names of all present lab members"
 date: "Date"
@@ -23,19 +22,44 @@ output: html_document
 
 <br>
 
-##### Include this set up chunk after your header to load your libraries
-<pre><code>```{r setup, include=FALSE}
-#Load your libraries
+##### Include this set up chunk after your header to load your libraries.
+<pre><code>```{r, include=FALSE}
 library(mosaic)
 ```</code></pre>
 
-<br>
 
-##### Insert data import code into this chunk
-<pre><code>```{r}
-#Include code here to import the data
 
-```</code></pre>
+## Style
+
+* Change rendered html documents from appearing in a **separate** window to appearing in a **docked** window by clicking on *white gear* to the right of Knit and select `Preview in Viewer Pane`.
+
+* **R code** goes in an *R chunk*.
+
+* **Written responses** are written in the *white space* outside of an R chunk.
+
+* Have **undesired text wrapping**?  Insert a *blank line* in between your written responses and/or code chunks to have items go on separate lines.
+
+* **Style** your written responses using the syntax below to make it easier to read.
+
+* **Customize** the look of your html document by clicking on *white gear* to the right of Knit and selec `Output Options`.  Try different options for `Syntax highlighting` and `Apply theme`.
+
+* Later in in the quarter, you might be intersted in writing with various **math symbols**.  Mathemtatical text renders between *dollars signs*. (Math symbols do **not** go in an R chunk.) Here are some examples:
+
+Math symbol | Rendered result
+------------|----------------
+`$\mu$`     | $\mu$ 
+`$\hat{p}$` | $\hat{p}$
+`$\bar{x}$` | $\bar{x}$
+`$\neq$`    | $\neq$
+`$H_0$`, `$H_a$`      | $H_0$, $H_a$   
+`$H_0:\mu=5$`| $H_0:\mu=5$
+
+
+
+![](rmarkdown.png)
+
+
+
 
 ## Importing 
 
@@ -57,16 +81,20 @@ library(mosaic)
 
 7. Click on the line of code that says `read.csv` - this is the code that was generated to import the data set.  It should turn blue when you click on it.
 
-8. Place your cursor in the R chunk that states _"Include code here to import the data"_.
+8. Insert an R chunk into your RMarkdown document.  Place your cursor in the R chunk. 
 
 9. In the upper right hand corner of RStudio, under the `History` tab, click on `To Source`.
 
-10. Verify that the import code is now in your R chunk.
+10. Verify that the import code is now in your R chunk.  It should look something like this:
+
+<pre><code>```{r}
+mydata <- read.csv("LOCATION/mydata.csv", header = TRUE)
+```</code></pre>
 
 11. You may need to make minor modifications to this code.  
 
 * If your code says `read_csv`, change this to `read.csv`.  
-* If you have an option that says `header=FALSE`, change this to `header=TRUE`.
+* If you have an option that says `header = FALSE`, change this to `header = TRUE`.
 
 ****
 
