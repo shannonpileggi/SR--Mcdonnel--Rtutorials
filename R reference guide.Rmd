@@ -332,6 +332,7 @@ _Requires you to load the mosaic package first._
 
 ######  $H_0$: $\mu_d=0$ vs $H_a$: $\mu_d\neq 0$
 
+`dataset$diff_variable <- dataset$quant_var1 - dataset$quant_var2` can be used to create a variable that represents the difference between your paired measurements
 
 `t.test(dataset$diff_variable, mu = 0)` performs a _paired t-test_ and computes a confidence interval 
 
